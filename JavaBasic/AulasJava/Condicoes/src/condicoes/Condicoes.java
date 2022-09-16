@@ -16,18 +16,23 @@ public class Condicoes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         Scanner teclado = new Scanner(System.in);
         
         System.out.print("Qual o ano que você nasceu: ");
         int nasc = teclado.nextInt();
-        int nascc = 2022 - nasc;
+        int i = 2022 - nasc;
         
-        if (nascc >= 18) {
-            System.out.println("Olá senhor maior de idade." + "Você tem " + nascc + " anos de Idade.");
-            
+        if (i < 16) {
+            System.out.println("Não vota");
         } else {
-            System.out.println("Você é menor de idade rapá, sai daqui! " + "você tem " + nascc + " anos de Idade.");
-        } 
+            if (i>=16 && i<18 || (i>70)) {
+                System.out.println("Voto opcional");
+            } else {
+                System.out.println("Voto obrigatório");
+            }
+        }
+ }
         
         /*System.out.print("Digite sua nota do primeiro semestre: ");
         float n1 = teclado.nextFloat();
@@ -40,6 +45,5 @@ public class Condicoes {
             System.out.println("Sua nota é " + m);
         }
 */
-    }
     
 }
