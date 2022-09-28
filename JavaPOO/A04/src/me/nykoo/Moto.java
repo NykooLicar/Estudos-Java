@@ -5,42 +5,34 @@ public class Moto {
    private String modelo;
    private String color;
    private boolean abertita;
-   private boolean fechadita;
 
-   public Moto(String m, String c, boolean a) { //Metodo construtor
-       this.modelo = m;
-       this.color = c;
-       this.abertita = a;
-       this.fechada();
-   }
+    public Moto(String modelo, String color, boolean abertita) {
+        this.modelo = modelo;
+        this.color = color;
+        this.abertita = abertita;
+    }
 
-   public String getModelo(){
-       return this.modelo;
-   }
+    public String getModelo() {
+        return modelo;
+    }
 
-   public void setModelo(String m) {
-       this.modelo = m;
-   }
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 
-   public String getColor() {
-       return this.color;
-   }
+    public String getColor() {
+        return color;
+    }
 
-   public void aberta() {
-       this.abertita = true;
-   }
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-   public void fechada() {
-       this.fechadita = false;
-   }
-   public void setColor(String c){
-       this.color = c;
-   }
+    public boolean isAbertita() {
+        return abertita;
+    }
 
-   public void status(){
-       System.out.println("Modelo: " + this.getModelo());
-       System.out.println("Color: " + this.getColor());
-       System.out.println("Aberta: " + this.abertita);
-   }
-
+    public void setAbertita(boolean abertita) {
+        this.abertita = abertita;
+    }
 }
